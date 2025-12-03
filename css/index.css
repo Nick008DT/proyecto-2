@@ -1,0 +1,221 @@
+/* ============================================== */
+/* 0. CONFIGURACIÓN INICIAL Y VARIABLES           */
+/* ============================================== */
+
+@import url("fonts.css"); /* Asegúrate de que esta ruta sea correcta */
+
+:root {
+    --color-header-bg: #140021; /* 🚨 COLOR MORADO: para la barra de navegación (HEADER) */
+    --color-body-bg: #000000;   /* 🚨 COLOR NEGRO: para el fondo general y el footer */
+    --color-text: #ffffff; 
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Fondo negro */
+    background: var(--color-body-bg); 
+    font-family: 'Knewake', sans-serif; 
+    color: var(--color-text); 
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+
+/* ============================================== */
+/* 1. ESTILOS DEL HEADER (Barra Única)            */
+/* ============================================== */
+
+header {
+    /* Fondo morado */
+    background-color: var(--color-header-bg); 
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); 
+}
+
+.main-nav-final {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+}
+
+/* GRUPO IZQUIERDO: Logo y Ícono de menú */
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    flex-basis: 300px; 
+}
+
+.menu-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.logo-text {
+    /* Fuente Rubik Glitch */
+    font-family: 'RubikGlitch', sans-serif; 
+    font-size: 30px; 
+    margin: 0;
+    font-weight: normal;
+}
+
+/* GRUPO CENTRAL: Menú de Categorías */
+.nav-links {
+    list-style: none; 
+    display: flex;
+    gap: 20px; 
+    text-transform: uppercase;
+    flex-grow: 1; 
+    justify-content: center;
+}
+
+.nav-links a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--color-text); 
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: #f10101; 
+}
+
+/* GRUPO DERECHO: Íconos de Acción */
+.user-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    flex-basis: 150px; 
+    justify-content: flex-end;
+}
+
+.user-icon {
+    width: 28px; 
+    height: 28px;
+    cursor: pointer;
+}
+
+
+/* ============================================== */
+/* 2. ESTILOS DE GALERÍA DE DESTACADOS            */
+/* ============================================== */
+
+.galeria-destacados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0; 
+    width: 100%;
+    /* Mantiene las imágenes separadas del fondo */
+    background-color: var(--color-body-bg); 
+}
+
+.destacado-card {
+    position: relative; 
+    display: block;
+    overflow: hidden;
+    height: 650px; 
+}
+
+.destacado-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.destacado-card:hover img {
+    transform: scale(1.05); 
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 30px; 
+    left: 30px;
+    z-index: 10;
+    color: white;
+}
+
+.card-overlay h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); 
+    text-transform: uppercase;
+}
+
+.shop-button {
+    background-color: #000000;
+    color: white;
+    border: 1px solid white; 
+    padding: 12px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif; 
+    transition: background-color 0.3s;
+}
+
+.shop-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ============================================== */
+/* 3. ESTILOS DEL FOOTER                          */
+/* ============================================== */
+
+footer {
+    /* Fondo negro */
+    background-color: var(--color-body-bg); 
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-family: 'Knewake', cursive; 
+    font-size: 28px; 
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.footer-links-grid {
+    display: flex; 
+    justify-content: center;
+    gap: 50px; 
+}
+
+.footer-links-grid ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-links-grid li {
+    margin-bottom: 10px;
+}
+
+.footer-links-grid a {
+    font-family: 'Knewake', cursive; 
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-links-grid a:hover {
+    color: #ffcc00;
+}
